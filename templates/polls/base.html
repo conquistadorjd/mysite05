@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "polls/head.html" %}
+</head>
+
+<body>
+    <!-- <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"> -->
+    {% include "polls/navbar.html" %}
+        <div id="sidebar">
+        {% block sidebar %}
+        {% endblock %}
+        </div>
+
+        {% block content %}
+            <h>This is content Block from base file </h>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/polls/first/">first</a></li>
+                <li><a href="/polls/second/">second</a></li>
+                <li><a href="/polls/third/">third</a></li>
+                <li><a href="/polls/fourth/">fourth</a></li>
+                <li><a href="/polls/fifth/">fifth</a></li>
+                <li><a href="/polls/sixth/">sixth</a></li>
+                <li><a href="/polls/seventh/">seventh</a></li>
+                </ul>        
+        {% endblock %}
+        <div class="container">
+        {% block footer %}
+            {% include "polls/footer.html" %}
+        {% endblock %}
+        </div>
+</body>
+</html>
